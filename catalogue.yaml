@@ -35,5 +35,5 @@
   - name: extract catalogue application
     ansible.bultin.unarchive:
       src: /tmp/catalogue.zip
-      dest:  /app
+      dest: /app
              
