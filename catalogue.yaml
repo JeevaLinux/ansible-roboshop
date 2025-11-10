@@ -33,7 +33,7 @@
       dest: /tmp/catalogue.zip
 
   - name: extract catalogue application
-    ansible.bultin.unarchive:
+    ansible.builtin.unarchive:
       src: /tmp/catalogue.zip
       dest: /app
              
