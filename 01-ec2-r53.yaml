@@ -8,10 +8,8 @@
     domain_name: "daws86.uno"
     instances:
     #we can pass instances through command line using -e
-    # - mongodb
-    # - redis
-    # - mysql
-    # - rabbitmq
+    - mongodb
+    - redis
   tasks:
   - name: create ec2 instance  
     amazon.aws.ec2_instance:
