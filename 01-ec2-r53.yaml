@@ -41,19 +41,19 @@
     amazon.aws.route53:
       state: present
       zone: "{{ domain_name }}"   
-      record: "{{ item.item }}.{{ domain_name }}"
+      record: "{{ item.item }}.{{ domain_name }}" #mongodb.daws86.uno
       type: A
       ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
       overwrite: true
     loop: "{{ ec2_output.results }}"   
-    
+
   # we are creating one record with public IP only for frontend
   - name: create route53 record for frontend
     amazon.aws.route53:
       state: present
       zone: "{{ domain_name }}"   
-      record: "{{ item.item }}.{{ domain_name }}"
+      record: "{{ item.item }}.{{ domain_name }}" #daws86.uno
       type: A
       ttl: 1
       value: "{{ item.instances[0].public_ip_address }}"
